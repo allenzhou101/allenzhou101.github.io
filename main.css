@@ -1,0 +1,143 @@
+.intro-letters {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  list-style: none;
+  transform: translate(-50%,-50%);
+  white-space: nowrap;
+}
+
+.intro-letters li {
+  display: inline-block;
+  margin: 0;
+  color: white;
+  font-size: 5em;
+  font-family: 'Open Sans', Helvetica Neue, Arial, sans-serif;
+  font-weight: 600;
+}
+
+.intro-letters li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.special-intro-letter img{
+  width: 1em;
+  height: 2em;
+  object-fit: cover;
+  margin-bottom: -20%;
+}
+
+.intro-slogan {
+  /*color: #47e9b4;*/
+  color: #000000;
+  font-family: 'Open Sans', Helvetica Neue, Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+body {
+  font-family: 'Roboto';
+  margin:0;
+  padding:0;
+    }
+#particles-js {
+  height: 100vh;
+  /*background: white;*/
+}
+hr.line{
+  margin: 0;
+  border: 1px solid black;
+  width: 20px;
+}
+hr.line2{
+  margin: 0;
+  border: 1px solid white;
+  width: 20px;
+}
+.top {
+  z-index: 15;
+  background-color: transparent;
+  padding-top:3%;
+  position: fixed;
+  width: 100%;
+  font-size: 20px;
+}
+.logo {
+  display: inline-block;
+  margin-right: 60%;
+  margin-left:5%;
+
+}
+.about {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10%;
+  font-weight: bold;
+  color: black;
+}
+.about:hover{
+  color: gray !important;
+  transition: 1s;
+}
+.article-submission {
+    text-decoration: none;
+  display: inline-block;
+font-weight: bold;
+color: black;
+}
+.article-submission:hover{
+  color: gray !important;;
+  transition: 1s;
+}
+.middle {
+  padding-top: 20%;
+  position: absolute;
+  margin-left: 20%;
+  margin-right: 10%;
+  font-size: 60px;
+  color: black;
+}
+.middleB {
+  padding-top: 25%;
+  position: absolute;
+  margin-left: 20%;
+  margin-right: 50%;
+  font-size: 30px;
+  color:  #666666;
+}
+.bottom {
+  height: 50vh;
+  position: relative;
+  color: #42f4d4;
+}
+.image {
+  margin-left: 50%;
+  margin-top: 15%;
+  position: absolute;
+  filter: brightness(50%);
+}
+.image-text {
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 30%;
+  color: #e1e5ed;
+  font-size: 60px;
+  font-weight: bold;
+  z-index:2;
+}
+.bottom-text{
+  padding-top: 20%;
+  position: absolute;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 50px;
+}
+.bottom2 {
+  height: 50vh;
+  position: relative;
+
+}
