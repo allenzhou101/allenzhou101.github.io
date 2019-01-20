@@ -21,7 +21,6 @@
 }
 
 .special-intro-letter img{
-  width: 1em;
   height: 2em;
   object-fit: cover;
   margin-bottom: -20%;
@@ -48,6 +47,9 @@ body {
   height: 100vh;
   /*background: white;*/
 }
+#particle-js2 {
+  width: 50%;
+}
 hr.line{
   margin: 0;
   border: 1px solid black;
@@ -72,7 +74,7 @@ hr.line2{
   margin-left:5%;
 
 }
-.about {
+/*.about {
   text-decoration: none;
   display: inline-block;
   margin-right: 10%;
@@ -82,30 +84,31 @@ hr.line2{
 .about:hover{
   color: gray !important;
   transition: 1s;
-}
-.article-submission {
+}*/
+.contact {
+  margin-left: 10%;
     text-decoration: none;
   display: inline-block;
 font-weight: bold;
 color: black;
 }
-.article-submission:hover{
+.contact:hover{
   color: gray !important;;
   transition: 1s;
 }
 .middle {
-  padding-top: 20%;
+  padding-top: 12%;
   position: absolute;
-  margin-left: 20%;
+  margin-left: 25%;
   margin-right: 10%;
   font-size: 60px;
   color: black;
 }
 .middleB {
-  padding-top: 25%;
+  padding-top: 12%;
   position: absolute;
-  margin-left: 20%;
-  margin-right: 50%;
+  margin-left: 40%;
+  margin-right: 15%;
   font-size: 30px;
   color:  #666666;
 }
@@ -115,29 +118,63 @@ color: black;
   color: #42f4d4;
 }
 .image {
-  margin-left: 50%;
-  margin-top: 15%;
+  margin-left: 15%;
+  margin-top: 28%;
   position: absolute;
   filter: brightness(50%);
 }
 .image-text {
   position: absolute;
-  margin-left: 55%;
-  margin-top: 30%;
-  color: #e1e5ed;
+  margin-left: 60%;
+  margin-top: 40%;
+  color: white;
   font-size: 60px;
   font-weight: bold;
   z-index:2;
 }
 .bottom-text{
-  padding-top: 20%;
+  padding-top: 10%;
   position: absolute;
   margin-left: 10%;
   margin-right: 10%;
   font-size: 50px;
 }
+.image2 {
+  filter: brightness(70%);
+  margin-left: 5%;
+  width: 40%;
+  transition: transform .3s;
+  margin-bottom: 5%;
+}
+.image2:hover {
+  transform: scale(1.05);
+  filter: brightness(80%);
+}
 .bottom2 {
-  height: 50vh;
+  height: .1vh;
   position: relative;
-
+  background-color: gray;
+}
+.contact-section {
+  background-color: #1a1a1a;
+  height: 100vh;
+}
+.contact-section-text {
+  margin-top: 20%;
+  margin-left: 20%;
+  color: white;
+  position: absolute;
+  font-size: 20px;
+}
+.email {
+  margin-top: 25%;
+  margin-left: 20%;
+  color: #47e9b4;
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+}
+.email:hover {
+  color: #60e9b4;
+  transition: .5s;
 }

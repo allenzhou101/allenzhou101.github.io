@@ -11,18 +11,15 @@
 <body>
   <div id="intro-screen" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; background-color: #000000">
         <ul class="intro-letters">
-          <li class="special-intro-letter"><img src="logo-white-v.svg" style="object-position: 0;"></li>
+          <li class="special-intro-letter"><img src="axz-white-left.png" style="object-position: 0;"></li>
+          <li class="v">L</li>
+          <li class="v">L</li>
           <li class="v">E</li>
-          <li class="v">R</li>
-          <li class="v">D</li>
-          <li class="v">A</li>
           <li class="v">N</li>
-          <li class="v">T</li>
-          <li class="v"></li>
-          <li class="special-intro-letter"><img src="logo-white-l.svg" style="object-position: 100%"></li>
-          <li class="l">E</li>
-          <li class="l">A</li>
-          <li class="l">F</li>
+          <li class="special-intro-letter"><img src="axz-white-right.png" style="object-position: 100%"></li>
+          <li class="l">H</li>
+          <li class="l">O</li>
+          <li class="l">U</li>
         </ul>
         <!--<p class="intro-slogan">Discover. Dream. Dare.</p>-->
   </div>
@@ -30,16 +27,16 @@
 
 <div class = "top">
   <div class = "logo">
-    <a href = "verdantleaf.org">
-    <img src = "vl-logo-black.png" alt = "Logo" height = "40px">
+    <a href = "index.html">
+    <img src = "axz-black.png" alt = "Logo" height = "60px">
     <!--<img src = "vl-logo-white.png" alt = "Logo" height = "40px" href = "verdantleaf.php">-->
     </a>
   </div>
-  <a href="verdantleaf.org/about.php" class = "about">
+  <!--<a href="about.html" class = "about">
     about
-  </a>
-  <a href = "verdantleaf.org/article-submission.php" class = "article-submission">
-    article submission
+  </a>-->
+  <a href = "#0" class = "contact" onclick="smoothScroll(document.getElementById('scroll-target'))">
+    contact
   </a>
 </div>
 
@@ -49,15 +46,12 @@
   </div>
 </div>
 <div class = "middleB">
-  We create stunning sites pairing functionality with panache.
+  We design sites that pair functionality with panache.
 </div>
 <div class = "image-text">
-  Verdant Leaf
 </div>
 <div class = "image">
-  <a  href = "https://www.verdantleaf.org">
-    <img src = "dog_coding.jpg" alt = "Dog Coding" height = "600px" width = "500px" style="transform:rotate(180deg);">
-  </a>
+    <img src = "dallas-skyline.jpg" alt = "the Dallas skyline" height = "450px" width = "900px">
 </div>
 
 
@@ -69,14 +63,31 @@
 
 <div class = "bottom">
   <div class = "bottom-text">
-    Hello Brian Kernighan
+    Featured Projects
     <hr class = "line2">
   </div>
 </div>
 
-<div class = "bottom2">
 
+<a  href = "https://www.verdantleaf.org">
+  <div class = "image2">
+  <img src = "verdantleaf.png" alt = "guitar" width = "600px">
+  </div>
+</a>
+
+<div class = "bottom2">
 </div>
+<div class = "contact-section">
+  <div id="scroll-target"></div>
+  <div class = "contact-section-text">
+  send us an email at
+  </div>
+  <div class = "email">
+  ufoaz1@gmail.com
+</div>
+</div>
+
+
   <script>
   var timeline = anime.timeline();
         timeline.add({
@@ -101,13 +112,13 @@
           easing: 'easeOutQuart'
         }).add({
           targets: '.special-intro-letter:first-child',
-          translateX: '380%',
+          translateX: '220%',
           offset: 1500,
           duration: 1000,
           easing: 'easeOutQuart'
         }).add({
           targets: document.querySelectorAll('.special-intro-letter')[1],
-          translateX: '-250%',
+          translateX: '-130%',
           offset: 1500,
           duration: 1000,
           easing: 'easeOutQuart'
@@ -141,7 +152,7 @@
       window.onscroll = function() {
         var bottom = document.querySelector(".bottom");
         //console.log(window.scrollY);
-        if(window.scrollY > bottom.getBoundingClientRect().top) {
+        if(window.scrollY> bottom.getBoundingClientRect().top) {
           document.getElementsByClassName('logo')[0].style = "filter:invert(100%); transition: 1s;";
           anime({
             targets:document.body,
@@ -150,13 +161,13 @@
             easing: 'easeOutQuad'
           });
           anime({
-            targets:[".about", ".article-submission"],
+            targets:[".about", ".contact"],
             color: 'rgb(255,255,255)',
             duration: 2000,
             easing: 'easeOutQuad'
           });
         }
-        if(window.scrollY < bottom.getBoundingClientRect().top) {
+        if(window.scrollY< bottom.getBoundingClientRect().top) {
           document.getElementsByClassName('logo')[0].style = "filter:invert(0%); transition: 1s;";
           anime({
             targets:document.body,
@@ -165,7 +176,7 @@
             easing: 'easeOutQuad'
           });
           anime({
-            targets:[".about", ".article-submission"],
+            targets:[".about", ".contact"],
             color: 'rgb(0,0,0)',
             duration: 2000,
             easing: 'easeOutQuad'
@@ -173,7 +184,7 @@
         }
       }
 
-  var translations = ["hello", "你好", "ciao", "hola", "hallo"];
+  var translations = ["hola", "你好", "ciao", "hello", "hallo"];
   //, "bonjour", "namaste"
   function translate(index) {
     var h = document.getElementsByClassName('h')[0];
@@ -200,5 +211,29 @@
   translate(0);
 
   </script>
+  <script title="autoscroll">
+  	window.smoothScroll = function(target) {
+      var scrollContainer = target;
+      do { //find scroll container
+          scrollContainer = scrollContainer.parentNode;
+          if (!scrollContainer) return;
+          scrollContainer.scrollTop += 1;
+      } while (scrollContainer.scrollTop == 0);
+
+      var targetY = 0;
+      do { //find the top of target relatively to the container
+          if (target == scrollContainer) break;
+          targetY += target.offsetTop;
+      } while (target = target.offsetParent);
+
+      scroll = function(c, a, b, i) {
+          i++; if (i > 50) return;
+          c.scrollTop = a + (b - a) / 50 * i;
+          setTimeout(function(){ scroll(c, a, b, i); }, 20);
+      }
+      // start scrolling
+      scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+      }
+  	</script>
 </body>
 </html>
