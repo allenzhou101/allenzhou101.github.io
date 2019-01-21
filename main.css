@@ -47,9 +47,6 @@ body {
   height: 100vh;
   /*background: white;*/
 }
-#particle-js2 {
-  width: 50%;
-}
 hr.line{
   margin: 0;
   border: 1px solid black;
@@ -60,6 +57,7 @@ hr.line2{
   border: 1px solid white;
   width: 20px;
 }
+
 .top {
   z-index: 15;
   background-color: transparent;
@@ -108,7 +106,7 @@ color: black;
   padding-top: 12%;
   position: absolute;
   margin-left: 40%;
-  margin-right: 15%;
+  margin-right: 20%;
   font-size: 30px;
   color:  #666666;
 }
@@ -145,8 +143,20 @@ color: black;
   width: 40%;
   transition: transform .3s;
   margin-bottom: 5%;
+  display: inline-block;
 }
 .image2:hover {
+  transform: scale(1.05);
+  filter: brightness(80%);
+}
+.image3 {
+  filter: brightness(70%);
+  margin-left: 5%;
+display: inline-block;
+  transition: transform .3s;
+  margin-bottom: 5%;
+}
+.image3:hover {
   transform: scale(1.05);
   filter: brightness(80%);
 }
@@ -177,4 +187,7 @@ color: black;
 .email:hover {
   color: #60e9b4;
   transition: .5s;
+}
+a {
+  text-decoration: none;
 }
