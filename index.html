@@ -63,7 +63,7 @@
 
 <div class = "bottom">
   <div class = "bottom-text">
-    Featured Projects
+    featured projects
     <hr class = "line2">
   </div>
 </div>
@@ -71,7 +71,12 @@
 
 <a  href = "https://www.verdantleaf.org">
   <div class = "image2">
-  <img src = "verdantleaf.png" alt = "guitar" width = "600px">
+  <img src = "Verdant-Leaf-January.png" alt = "verdantleaf" width = "500px">
+  </div>
+</a>
+<a  href = "https://www.verdantlife.org">
+  <div class = "image3">
+  <img src = "verdantlife.png" alt = "verdantlife" width = "500px">
   </div>
 </a>
 
@@ -80,7 +85,7 @@
 <div class = "contact-section">
   <div id="scroll-target"></div>
   <div class = "contact-section-text">
-  send us an email at
+  email us
   </div>
   <div class = "email">
   ufoaz1@gmail.com
@@ -140,7 +145,7 @@
           document.getElementById("intro-screen").style.display = "none";
         }
 
-    var line = anime({
+        anime({
         targets: ['hr.line', "hr.line2"],
         width: '100%', // -> from '28px' to '50px',
         easing: 'easeInOutQuad',
@@ -148,6 +153,7 @@
         loop: true,
         autoplay: true
         });
+
 
       window.onscroll = function() {
         var bottom = document.querySelector(".bottom");
