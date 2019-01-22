@@ -102,6 +102,7 @@ color: black;
   margin-right: 10%;
   font-size: 60px;
   color: black;
+
 }
 .middleB {
   padding-top: 12%;
@@ -122,7 +123,15 @@ color: black;
   position: absolute;
   filter: brightness(50%);
 }
-
+img.dallas {
+  height: 38vw;
+}
+img.a {
+  width:35vw;
+}
+img.b {
+  width:35vw;
+}
 .bottom-text{
   padding-top: 10%;
   position: absolute;
@@ -184,23 +193,126 @@ display: inline-block;
 a {
   text-decoration: none;
 }
-/*
-@media screen and (max-width: 1080px) {
-  .middle {
-    padding-top: 32%;
 
-    font-size: 60px;
-    color: black;
+@media screen and (max-width: 1080px) {
+  #particles-js {
+    height: 42vh;
+    /*background: white;*/
+  }
+  hr.line{
+    margin: 0;
+    border: 1px solid black;
+    width: 20px;
+  }
+  hr.line2{
+    margin: 0;
+    border: 1px solid white;
+    width: 20px;
+  }
+
+  .top {
+    z-index: 15;
+    background-color: transparent;
+    padding-top:3%;
+    position: fixed;
+    width: 100%;
+    font-size: 20px;
+  }
+  .logo {
+    display: inline-block;
+margin-right: 30%;
+  }
+
+  .contact {
+      text-decoration: none;
+    display: inline-block;
+  font-weight: bold;
+  color: black;
+  }
+  .contact:hover{
+    color: gray !important;;
+    transition: 1s;
+  }
+  .middle {
+margin-top: 20%;
   }
   .middleB {
     padding-top: 52%;
-
-    font-size: 30px;
+    position: absolute;
+    margin-left: 20%;
+    font-size: 14px;
     color:  #666666;
   }
+  .bottom {
+    height: 10vh;
+    position: relative;
+    color: #42f4d4;
+  }
   .image {
-
+    margin-left: 15%;
     margin-top: 68%;
+    position: absolute;
     filter: brightness(50%);
   }
-}*/
+img.dallas {
+  height: 40vw;
+}
+
+  .bottom-text{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 20px;
+  }
+  .image2 {
+    filter: brightness(70%);
+    margin-left: 5%;
+    transition: transform .3s;
+    margin-bottom: 5%;
+    display: inline-block;
+  }
+  .image2:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+  }
+  .image3 {
+    filter: brightness(70%);
+  display: inline-block;
+    transition: transform .3s;
+    margin-bottom: 5%;
+  }
+  .image3:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+  }
+  .bottom2 {
+    height: .1vh;
+    position: relative;
+    background-color: gray;
+  }
+  .contact-section {
+    background-color: #1a1a1a;
+    height: 20vh;
+  }
+  .contact-section-text {
+    margin-top: 20%;
+    margin-left: 20%;
+    color: white;
+    position: absolute;
+    font-size: 10px;
+  }
+  .email {
+    margin-top: 25%;
+
+    color: #47e9b4;
+    position: absolute;
+    font-size:20px;
+    font-weight: bold;
+  }
+  .email:hover {
+    color: #60e9b4;
+    transition: .5s;
+  }
+  #intro-screen {
+    display: none;
+  }
+}
