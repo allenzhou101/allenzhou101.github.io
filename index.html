@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132847876-1"></script>
 <script>
@@ -83,7 +85,7 @@
     <ul>
       <li class = "summary"><a class = "effect-box" href = "https://www.verdantleaf.org"target = "_blank">
         an avant-garde article publishing site with a vibrant color scheme  </a></li>
-        <br>
+        <br><br>
       <li class = "summary"><a class = "effect-box" href = "https://www.verdantlife.org"target = "_blank">
         a sharp, fresh nutrition website promoting healthier lifestyles</a></li>
 
@@ -98,11 +100,117 @@
   <div class = "contact-section-text">
   email me
   </div>
-  <div class = "email">
+  <div class = "email" onmouseover="changeBackground('#c4f2e4', '#abbcd6', '#3d5151', 1)" onmouseout="changeBackground('#1a1a1a', 'white', '#47e9b4', 0)">
   ufoaz1@gmail.com
 </div>
+  <script>
+  //dots
+  //https://codepen.io/falldowngoboone/pen/PwzPYv
+  // dots is an array of Dot objects,
+// mouse is an object used to track the X and Y position
+   // of the mouse, set with a mousemove event listener below
+var dots = [],
+    mouse = {
+      x: 0,
+      y: 0
+    };
 
+// The Dot object used to scaffold the dots
+var Dot = function() {
+  this.x = 0;
+  this.y = 0;
+  this.node = (function(){
+    var n = document.createElement("div");
+    n.className = "trail";
+    document.body.appendChild(n);
+    return n;
+  }());
+};
+// The Dot.prototype.draw() method sets the position of
+  // the object's <div> node
+Dot.prototype.draw = function() {
+  this.node.style.left = this.x + "px";
+  this.node.style.top = this.y + "px";
+};
 
+// Creates the Dot objects, populates the dots array
+for (var i = 0; i < 12; i++) {
+  var d = new Dot();
+  dots.push(d);
+}
+
+// This is the screen redraw function
+function draw() {
+  // Make sure the mouse position is set everytime
+    // draw() is called.
+  var x = mouse.x,
+      y = mouse.y;
+
+  // This loop is where all the 90s magic happens
+  dots.forEach(function(dot, index, dots) {
+    var nextDot = dots[index + 1] || dots[0];
+
+    dot.x = x;
+    dot.y = y;
+    dot.draw();
+    x += (nextDot.x - dot.x) * .6;
+    y += (nextDot.y - dot.y) * .6;
+
+  });
+}
+
+addEventListener("mousemove", function(event) {
+  //event.preventDefault();
+  mouse.x = event.pageX;
+  mouse.y = event.pageY;
+});
+
+// animate() calls draw() then recursively calls itself
+  // everytime the screen repaints via requestAnimationFrame().
+function animate() {
+  draw();
+  requestAnimationFrame(animate);
+}
+
+// And get it started by calling animate().
+animate();
+
+  </script>
+  <script>
+  //parallax
+  document.onscroll = function() {
+  var sectionA = document.querySelector(".container-sectionB");
+
+  if(window.scrollY> sectionA.getBoundingClientRect().top){
+      document.querySelector('.section-A').style = "margin-top: 0;";
+      document.querySelector('.section-A').style.position = "relative";
+    }
+    if (window.scrollY< sectionA.getBoundingClientRect().top){
+      document.querySelector('.section-A').style = "margin-top: 12%;";
+      document.querySelector('.section-A').style.position = "fixed";
+    }
+  }
+  </script>
+  <script>
+  //email hover animation
+  function changeBackground(color, colorName, emailColor, i) {
+    document.getElementsByClassName("contact-section")[0].style = 'transition: .5s;';
+    document.getElementsByClassName("contact-section")[0].style.backgroundColor =color;
+    document.getElementsByClassName("contact-section-text")[0].style = 'transition: .5s;';
+    document.getElementsByClassName("contact-section-text")[0].style.color = colorName;
+    document.getElementsByClassName("email")[0].style = 'transition: .5s;';
+    document.getElementsByClassName("email")[0].style.color = emailColor;
+    if (i == 1){
+      document.getElementsByClassName("contact")[0].style.color =  "#494e56";
+      document.getElementsByClassName("logo")[0].style = "filter: invert(30%);";
+    }
+    else {
+      document.getElementsByClassName("contact")[0].style.color = "#ffffff";
+      document.getElementsByClassName("logo")[0].style = "filter: invert(100%);";
+    }
+
+  }
+  </script>
   <script>
   //opening animation
   var timeline = anime.timeline();
@@ -219,7 +327,7 @@
       anime({
         targets:[".about", ".contact"],
         color: 'rgb(255,255,255)',
-        duration: 2000,
+        duration: 500,
         easing: 'easeOutQuad'
       });
     }
@@ -234,7 +342,7 @@
       anime({
         targets:[".about", ".contact"],
         color: 'rgb(0,0,0)',
-        duration: 2000,
+        duration: 500,
         easing: 'easeOutQuad'
       });
     }
