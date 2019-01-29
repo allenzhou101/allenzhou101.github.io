@@ -1,3 +1,9 @@
+.trail { /* className for the trail elements */
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: teal;
+  }
 .intro-letters {
   position: absolute;
   top: 50%;
@@ -26,7 +32,7 @@
   margin-bottom: -20%;
 }
 body {
-  font-family: 'Roboto';
+  font-family: 'Indie Flower', cursive;
   margin:0;
   padding:0;
     }
@@ -36,8 +42,7 @@ body {
   z-index: -1;
   top: 0;
     left: 0;
-    width: 100vw;
-  /*background: white;*/
+    width: 98vw;
 }
 .navigation-bar {
   z-index: 15;
@@ -70,13 +75,13 @@ body {
   }
 
 .container-sectionA {
-  height: 40vh;
+  height: 50vh;
 }
   .section-A {
     margin-top: 12%;
     width: 50%;
     margin-left: 25%;
-
+    position: fixed;
   }
   hr.line{
     margin: 0;
@@ -87,8 +92,6 @@ body {
     font-size: 60px;
     display: inline-block;
     width: 30%;
-    text-align: top;
-
   }
   .middleB {
     display: inline-block;
@@ -106,6 +109,7 @@ body {
     height: 38vw;
     margin-left: 5%;
     filter: brightness(50%);
+    position: relative;
   }
   .dallas-word-group {
     position: absolute;
@@ -187,6 +191,7 @@ a.effect-box:hover:before {
   .contact-section {
     background-color: #1a1a1a;
     height: 100vh;
+
   }
   .contact-section-text {
     margin-top: 20%;
@@ -202,8 +207,4 @@ a.effect-box:hover:before {
     position: absolute;
     font-size: 40px;
     font-weight: bold;
-  }
-  .email:hover {
-    color: #60e9b4;
-    transition: .5s;
   }
