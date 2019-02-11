@@ -1,3 +1,57 @@
+@media screen and (max-width: 1020px) {
+  #intro-screen {
+    display: none;
+
+  }
+
+  .bottom2 {
+    display: none;
+  }
+  .contact-section {
+    background-color: inherit !important;
+  }
+  .f1 {
+    padding-top: 30% !important;
+  }
+  .email {
+    margin-left: 10% !important;
+  }
+  .section-A {
+    margin-top: 32% !important;
+    margin-left: 16% !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+  .dallas-word-group {
+    bottom: auto !important;
+    margin-top: 5vh;
+  }
+  .hello {
+    font-size: 25px !important;
+  }
+  .middleB {
+    font-size: 20px !important;
+  }
+  .container-sectionA {
+    height: 50% !important;
+  }
+  .container-sectionB {
+    position: relative !important;
+    height: 20vh !important;
+  }
+  li a {
+    color: white !important;
+  }
+  .contact-section {
+    height: 30vh !important;
+    width: 100% !important;
+  }
+  
+
+  .trail {
+    display: none;
+  }
+}
 .trail { /* className for the trail elements */
     position: absolute;
     height: 6px; width: 6px;
