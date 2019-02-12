@@ -111,9 +111,6 @@ body {
     color:  #666666;
     width: 69%;
   }
-  .w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9, .w10 {
-    display: inline-block;
-  }
 .container-sectionB {
   height: 63vh;
   position: relative;
@@ -160,7 +157,7 @@ body {
     color: #e1e6ef;
     font-size: 3vw;
     text-decoration: none;
-    left: 3%;
+    left: 5%;
     position: relative;
 
   }
