@@ -69,36 +69,6 @@
       </div>
     </div>
     <div class = "middleB">
-      <div class = "w1">
-        Allen
-      </div>
-      <div class = "w2">
-        Zhou
-      </div>
-      <div class = "w3">
-        designs
-      </div>
-      <div class = "w4">
-        sites
-      </div>
-      <div class = "w5">
-        that
-      </div>
-      <div class = "w6">
-        pair
-      </div>
-      <div class = "w7">
-        functionality
-      </div>
-      <div class = "w8">
-        and
-      </div>
-      <div class = "w9">
-        panache
-      </div>
-      <div class = "w10">
-        .
-      </div>
     </div>
   </div>
 </div>
@@ -142,80 +112,58 @@
 </div>
 
   <script>
-  var timeline = anime.timeline();
 
-  timeline.add({
+  var timelin = anime.timeline();
+
+  timelin.add({
     targets: [".middleA"],
     offset: 3200,
     duration: 2500,
     opacity: [0,1],
     easing: 'easeOutQuart'
-  }).add({
-    targets: [".w1"],
-    offset: '-=1900',
-    duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w2"],
-    offset: 4000,
-    duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w3"],
-    offset: 4200,
-    duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w4"],
-    offset: 4400,
-    duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w5"],
-    offset: 4600,
-    duration: 2500,
-    opacity: [0,6],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w6"],
-    offset: 4800,
-    duration: 2500,
-    opacity: [0,6],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w7"],
-    offset: 5000,
-    duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w8"],
-    offset: 5200,
-    duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w9"],
-    offset: 5400,
-    duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
-  }).add({
-    targets: [".w10"],
-    offset: 5600,
-    duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
-  }).add({
+  })
+
+  var sentence = "Allen Zhou designs sites that pair functionality and panache.";
+  var letters = sentence.split("");
+  var num = 0;
+  for (var j = 0; j < 9; j++) {
+    var wordDiv = document.createElement("div");
+    wordClas = "w" + j;
+    wordDiv.setAttribute('class', wordClas);
+    wordDiv.style.display = "inline-block";
+    document.querySelector('.middleB').appendChild(wordDiv);
+    while (num < letters.length){
+      var letter = letters[num];
+      var clas = "l" + num;
+      if (letter == " ") {
+        letter = "&nbsp;";
+      }
+      var div = document.createElement("div");
+      div.innerHTML = "" + letter;
+      div.setAttribute('class', clas);
+      div.style.display = "inline-block";
+      document.querySelector("." + wordClas).appendChild(div);
+      clas = "." + clas;
+      timelin.add({
+        targets: clas,
+        offset: '-=2470',
+        duration: 2500,
+        opacity: [0,1],
+        easing: 'easeOutQuart'
+      })
+      num+= 1;
+      if (letter == "&nbsp;"){
+        break;
+      }
+
+    }
+  }
+
+  timelin.add({
     targets: [".container-sectionB"],
-    offset: 6000,
+    offset: '-=1500',
     duration: 2500,
-    opacity: [0,1],
-    easing: 'easeOutQuart'
+    opacity: [0,1]
   });
 
 
