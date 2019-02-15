@@ -55,12 +55,12 @@ body {
 .navigation-bar {
   z-index: 15;
   background-color: transparent;
-  padding-top:3%;
   position: fixed;
   width: 100%;
   font-size: 20px;
   top:0;
   left:0;
+  padding-top: 3vh;
 }
   .logo {
     display: inline-block;
@@ -70,18 +70,39 @@ body {
   }
   .contact {
   width: 25%;
+  height: 4vh;
   text-align: right;
   padding-right: 5%;
   text-decoration: none;
   display: inline-block;
-  font-weight: bold;
-  color: black;
+
+  overflow: hidden;
   }
-  .contact:hover{
-    color: gray !important;;
-    transition: 1s;
+  .contact a {
+    font-weight: bold;
+    color: black;
+  }
+  .contact-hover {
+    display: inline-block;
+  }
+  .contact-hover-insideA {
+    height: 4vh;
+  }
+  .contact-hover-inside{
+  padding-top: 4vh;
   }
 
+  .contact-hover:hover {
+    transform: translateY(-4vh);
+    transition: .2s;
+    transition-timing-function: ease-out;
+  }
+  .contact-hover:hover div.contact-hover-inside{
+    transform: translateY(-4vh);
+    transition: .2s;
+    transition-delay: .2s;
+    transition-timing-function: ease-out;
+  }
 .container-sectionA {
   height: 50vh;
 }
@@ -145,7 +166,8 @@ body {
     margin-left: 10%;
   }
 .container-sectionC {
-  height: 60vh;
+  height: 30vh;
+
 }
   .f1 {
     margin-top: 10%;
@@ -203,6 +225,7 @@ a.effect-box:hover:before {
   height: .1vh;
   position: relative;
   background-color: gray;
+
 }
   .contact-section {
     background-color: #1a1a1a;
