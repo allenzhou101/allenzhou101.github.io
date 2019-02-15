@@ -55,9 +55,18 @@
     <!--<a href="about.html" class = "about">
       about
     </a>-->
-    <a href = "#0" class = "contact" onclick="smoothScroll(document.getElementById('scroll-target'))">
-      contact
+    <div  class = "contact" >
+    <a href = "#0"onclick="smoothScroll(document.getElementById('scroll-target'))">
+      <div class = "contact-hover">
+        <div class = contact-hover-insideA>
+        contact
+        </div>
+        <div class = "contact-hover-inside">
+        contact
+        </div>
+      </div>
     </a>
+  </div>
   </div>
 
 <div class = "container-sectionA">
@@ -286,11 +295,11 @@ animate();
     document.getElementsByClassName("email")[0].style = 'transition: 2s;';
     document.getElementsByClassName("email")[0].style.color = emailColor;
     if (i == 1){
-      document.getElementsByClassName("contact")[0].style.color =  "#494e56";
+      document.querySelector(".contact a").style.color =  "#494e56";
       document.getElementsByClassName("logo")[0].style = "filter: invert(30%);";
     }
     else {
-      document.getElementsByClassName("contact")[0].style.color = "#ffffff";
+      document.querySelector(".contact a").style.color = "#ffffff";
       document.getElementsByClassName("logo")[0].style = "filter: invert(100%);";
     }
   }
@@ -352,7 +361,7 @@ animate();
     //line growing animation
     anime({
     targets: ['hr.line'],
-    width: '15%',
+    width: '30%',
     easing: 'easeInOutQuad',
     direction: 'alternate',
     loop: true,
@@ -409,7 +418,7 @@ animate();
         easing: 'easeOutQuad'
       });
       anime({
-        targets:[".about", ".contact"],
+        targets:[".about", ".contact a"],
         color: 'rgb(255,255,255)',
         duration: 500,
         easing: 'easeOutQuad'
@@ -424,7 +433,7 @@ animate();
         easing: 'easeOutQuad'
       });
       anime({
-        targets:[".about", ".contact"],
+        targets:[".about", ".contact a"],
         color: 'rgb(0,0,0)',
         duration: 500,
         easing: 'easeOutQuad'
