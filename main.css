@@ -6,7 +6,6 @@
     border-radius: 3px;
     background: teal;
     pointer-events: none;
-
   }
 
 #intro-screen {
@@ -43,7 +42,7 @@ body {
   font-family: 'Indie Flower', cursive;
   margin:0;
   padding:0;
-    }
+    } 
 #particles-js {
   height: 100vh;
   position: absolute;
