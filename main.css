@@ -101,6 +101,7 @@ body {
     transition: .2s;
     transition-delay: .2s;
     transition-timing-function: ease-out;
+    color: #aeb7c4;
   }
 .container-sectionA {
   height: 50vh;
