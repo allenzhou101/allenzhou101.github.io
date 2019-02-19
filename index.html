@@ -133,10 +133,10 @@
     easing: 'easeOutQuart'
   })
 
-  var sentence = "Allen and Anthony Zhou designs sites that pair functionality and panache.";
+  var sentence = "Allen and Anthony Zhou designs sites that pair functionality with panache.";
   var letters = sentence.split("");
   var num = 0;
-  for (var j = 0; j < 9; j++) {
+  for (var j = 0; j < sentence.split(" ").length; j++) {
     var wordDiv = document.createElement("div");
     wordClas = "w" + j;
     wordDiv.setAttribute('class', wordClas);
@@ -173,6 +173,7 @@
     targets: [".container-sectionB"],
     offset: '-=1500',
     duration: 2500,
+    easing: 'easeOutQuart',
     opacity: [0,1]
   });
 
