@@ -6,6 +6,7 @@
     border-radius: 3px;
     background: teal;
     pointer-events: none;
+
   }
 
 #intro-screen {
@@ -42,7 +43,7 @@ body {
   font-family: 'Indie Flower', cursive;
   margin:0;
   padding:0;
-    } 
+    }
 #particles-js {
   height: 100vh;
   position: absolute;
@@ -95,6 +96,7 @@ body {
     transform: translateY(-4vh);
     transition: .2s;
     transition-timing-function: ease-out;
+
   }
   .contact-hover:hover div.contact-hover-inside{
     transform: translateY(-4vh);
@@ -166,7 +168,7 @@ body {
     margin-left: 10%;
   }
 .container-sectionC {
-  height: 30vh;
+  height: 50vh;
 
 }
   .f1 {
