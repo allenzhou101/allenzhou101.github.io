@@ -43,6 +43,7 @@ body {
   font-family: 'Indie Flower', cursive;
   margin:0;
   padding:0;
+  overflow-x: hidden;
     }
 #particles-js {
   height: 100vh;
@@ -168,7 +169,7 @@ body {
     margin-left: 10%;
   }
 .container-sectionC {
-  height: 50vh;
+  height: 80vh;
 
 }
   .f1 {
