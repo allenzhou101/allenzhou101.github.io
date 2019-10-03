@@ -5,26 +5,33 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vibes&display=swap" rel="stylesheet">
 
     <title></title>
   </head>
   <body>
     <div class = "navigation">
       <a class = "left" href = "#target1">Moron</a>
-      <a class = "right" href = "#0" onclick="smoothScroll(document.getElementById('scroll-target'))">contact</a>
+      <a class = "right" href = "#0" onclick="smoothScroll(document.getElementById('scroll-target'))">
+        <div class = "line"></div>
+        <div class = "line"></div>
+      </a>
     </div>
     <div class = "container">
-      <p class = "slogan">We're not idiots, we are...</p>
-       <!-- <br>OR<br> Many Morons makes a genius. -->
-      <div class = "title">
-        <div class = "top">
-          <!-- We Are -->
+      <div class = "title-container">
+        <p class = "slogan">We're not idiots, we are...</p>
+         <!-- <br>OR<br> Many Morons makes a genius. -->
+        <div class = "title">
+          <div class = "top">
+            <!-- We Are -->
+          </div>
+          <div class = "bottom">Moron</div>
         </div>
-        <div class = "bottom">Moron</div>
+
+        <p class = "description_1">
+          Together, we can make products that changes the world. 😝
+        </p>
       </div>
-      <p class = "description_1">
-        Together, we can make a product that changes the world.
-      </p>
       <img class = "image-1" src = "images/one.jpg" width = "800px">
 
       <p class = "description_2">
@@ -48,15 +55,7 @@
 
 
 </div>
-<div class = "last">
-  <div class = "email-container">
-    <!-- <a class = "email" href = "@mailto:">ouremail@email.com</a> -->
-  </div>
-  <!-- <div class = "youtube-container"> -->
-    <!-- <a class = "youtube" href = "youtube.com">view our Youtube</a> -->
-  <!-- </div> -->
 
-</div>
 
     </div>
 
@@ -69,15 +68,26 @@
     </div>
   </body>
   <script>
+  console.log(window.innerWidth);
+
+  if (window.innerWidth > 1080){
     document.addEventListener("scroll", function() {
       var num = window.scrollY;
-      console.log(num);
       // translateNum = num / 10;
       letterSpacingNum = num / 10;
-
+      opacityNum = 1 - num / 350;
       // document.querySelector(".top").style.transform = "translateX(" + translateNum + "px)";
       // document.querySelector(".bottom").style.transform = "translateX(-" + translateNum + "px)";
       document.querySelector(".bottom").style.letterSpacing = letterSpacingNum + "px";
+      if (opacityNum >= 0 && opacityNum <= 1) {
+        document.querySelector(".title-container").style.opacity = opacityNum;
+
+      }
+      if (opacityNum < 0){
+        document.querySelector(".title-container").style.opacity = 0;
+
+      }
+
 
     });
     window.smoothScroll = function(target) {
@@ -100,5 +110,6 @@
       // start scrolling
       scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
       }
+    }
   </script>
 </html>
