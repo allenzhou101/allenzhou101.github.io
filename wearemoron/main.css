@@ -1,11 +1,13 @@
+
 body {
   background: #ffe6e6;
   /* font-family: 'Mansalva', cursive; */
   font-family: 'Montserrat', sans-serif;
   /* animation: backgroundChange 5s infinite alternate; */
-  height: 200vh;
-  width: 100%;
-  overflow-x: hidden;
+  /* height: 200vh; */
+  /* width: 100%; */
+  /* overflow-x: hidden; */
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -21,9 +23,10 @@ p {
 }
 .navigation {
   position: fixed;
-  top: 4vh;
+  top: 6vh;
   width: 90%;
   margin-left: 5%;
+  font-size: 3vh;
 
 }
 .left {
@@ -35,34 +38,45 @@ float: right;
 .container {
   text-align: center;
   width: 100%;
-
+  margin-top: 35vh;
+  position: sticky;
+  bottom: 0;
 }
 .slogan {
   font-size: 2vw;
   color: #747678;
 }
 .title {
-  font-size: 15vw;
+  font-size: 10vw;
   color: #1a0000;
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
 }
 
-.description {
-  font-size: 3vh;
-  width: 60%;
+.description_1 {
+  font-size: 5vh;
+  width: 35%;
   margin: auto;
+  /* margin-bottom: 3vh; */
+  color: #22252b;
+}
+.description_2 {
+  font-size: 5vh;
+  width: 65%;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: left;
+  font-weight: 1000;
 }
 .image-1 {
   display: flex;
   margin: auto;
-  padding-top: 10vh;
+  padding-top: 5vh;
   padding-bottom: 5vh;
 }
-.youtube {
-}
-.email {
-  margin-bottom: 3vh;
 
-}
 .call-to-action a {
   transition: .5s;
   font-size: 5vh;
@@ -73,19 +87,72 @@ float: right;
   /* text-decoration: none; */
 }
 .call-to-action {
-  margin: 5vh 0 5vh 0;
+  margin: 5vh auto 5vh auto;
 
 }
 .c2a-words {
   margin-bottom: 4vh;
-  display: inline-block;
-  width: 20%;
+  /* display: inline-block; */
+  /* width: 20%; */
   text-align: left;
-  margin-left: 5%;
+  margin: auto;
+  /* margin-left: 5%; */
 }
 .links {
-  display: inline-block;
-  width: 40%;
-  margin-left: 5%;
+  /* display: inline-block; */
+  /* width: 40%; */
   line-height: 10vh;
+  margin: 15vh 0 15vh 5%;
+
+}
+
+.youtube {
+  text-decoration: underline;
+  color: #004;
+}
+.email {
+  margin-bottom: 3vh;
+
+}
+.last {
+
+}
+.email-container {
+  display: inline-block;
+  /* height: 50vh; */
+  /* width: 30vw; */
+  /* background: white; */
+  /* vertical-align: middle; */
+}
+.youtube-container {
+  display: inline-block;
+  height: 50vh;
+  width: 30vw;
+  background: gray;
+  vertical-align: middle;
+}
+.contact {
+  /* height: 25vh; */
+  padding-bottom: 25vh;
+  width: 100%;
+  /* text-align: center; */
+  background: #000;
+  padding-top: 25vh;
+  color: white;
+
+}
+
+.contact a {
+  margin-top: 25vh;
+  width: 100%;
+  color: white;
+  font-size: 6vh;
+
+}
+.hello {
+  margin-bottom: 10vh;
+  color: #ffd;
+}
+.inner-contact {
+  margin-left: 20%;
 }
